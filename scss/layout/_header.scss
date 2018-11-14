@@ -1,0 +1,49 @@
+/* Masthead */
+
+.nav-link {
+  color: $white;
+  margin: 0 1rem;
+  font-size: 1.25rem;
+
+  @media #{$brk-narrow} {
+    font-size: 100%;
+    color: $black;
+  }
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+
+    // correct?
+    @media #{$brk-narrow} {
+      transform: scale(1);
+    }
+  }
+}
+
+.logo {
+  @extend %centeredX;
+  bottom: 30%;
+
+  @media #{$brk-narrow} {
+    bottom: -35%;
+  }
+}
+
+/* Background Video */
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  transform: scale(1.25);
+
+  @media #{$brk-narrow} {
+    display: none;
+  }
+}

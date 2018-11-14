@@ -1,0 +1,41 @@
+/* Base structure */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: $font-size;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+h1 {
+  color: $color-text;
+  font-size: 4em;
+}
+
+h2 {
+  color: $color-text;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+h3, h4, p, a{
+  color: $color-text;
+}
+
+p {
+  @media #{$brk-narrow} {
+    font-size: 17px;
+  }
+}
+
+a:hover {
+  color: $white;
+}
+
+.bg-eggshell {
+  background-color: $white;
+}

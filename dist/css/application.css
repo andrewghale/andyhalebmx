@@ -1,0 +1,207 @@
+/* Base structure */
+body {
+  font-family: "Open Sans", sans-serif; }
+
+html {
+  font-size: 22px;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0; }
+
+h1 {
+  color: #1e1f24;
+  font-size: 4em; }
+
+h2 {
+  color: #1e1f24;
+  font-size: 3.5em;
+  text-align: center; }
+
+h3, h4, p, a {
+  color: #1e1f24; }
+
+@media (max-width: 576px) {
+  p {
+    font-size: 17px; } }
+
+a:hover {
+  color: #fafafa; }
+
+.bg-eggshell {
+  background-color: #fafafa; }
+
+.fullheight {
+  height: 100vh;
+  position: relative; }
+  @media (max-width: 576px) {
+    .fullheight {
+      height: 65vh;
+      background-image: url(/../images/london1_opt.jpg);
+      background-position-y: 40%;
+      background-size: cover; } }
+
+.chev-div {
+  bottom: 10%; }
+
+@media (max-width: 576px) {
+  .mob-padding {
+    padding-top: 38%; } }
+
+.slick-container {
+  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(51, 106, 113, 0.7)), url("../images/london2-main.JPG");
+  background-size: cover;
+  padding: 110px 50px;
+  position: relative; }
+  @media (max-width: 576px) {
+    .slick-container {
+      background-image: none;
+      background-color: #fafafa;
+      padding: 0 0; } }
+
+@media (max-width: 576px) {
+  .slick-mob {
+    padding: 0 0; } }
+
+.shows-image-container {
+  position: relative;
+  overflow: hidden; }
+
+.shows-image {
+  height: auto;
+  width: 100%;
+  -webkit-transition: 1.6s ease;
+  transition: 1.6s ease; }
+
+.shows-image-container:hover .shows-image {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.footer {
+  padding-top: 1rem; }
+
+/* Masthead */
+.nav-link {
+  color: #fafafa;
+  margin: 0 1rem;
+  font-size: 1.25rem; }
+  @media (max-width: 576px) {
+    .nav-link {
+      font-size: 100%;
+      color: #1e1f24; } }
+
+.grow {
+  transition: all 0.2s ease-in-out; }
+  .grow:hover {
+    transform: scale(1.1); }
+    @media (max-width: 576px) {
+      .grow:hover {
+        transform: scale(1); } }
+
+.logo {
+  bottom: 30%; }
+  @media (max-width: 576px) {
+    .logo {
+      bottom: -35%; } }
+
+/* Background Video */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  transform: scale(1.25); }
+  @media (max-width: 576px) {
+    #myVideo {
+      display: none; } }
+
+.chev-div, .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+/* Contact */
+.emailtext {
+  font-size: 20px; }
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(25,26,29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
+/* Shows */
+.filter {
+  -webkit-filter: grayscale(30%), opacity(0.8);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(30%) opacity(0.9); }
+  .filter:hover {
+    -webkit-filter: grayscale(30%), opacity(0.8);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(20%) opacity(0.8);
+    transition: 0.2s; }
+
+.filter:hover {
+  -webkit-filter: grayscale(30%), opacity(0.8);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(20%) opacity(0.8);
+  transition: 0.2s; }
+
+.chevron-down {
+  fill: #fafafa;
+  width: 4em;
+  height: 4em;
+  animation-duration: 0.5s;
+  animation-name: hover-me;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+  @media (max-width: 576px) {
+    .chevron-down {
+      display: none; } }
+
+@keyframes hover-me {
+  100% {
+    transform: translate3d(0, 15px, 0); } }
+
+@media (max-width: 576px) {
+  .slick-arrow {
+    display: none !important; } }
+
+#next-arrow {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  fill: white; }
+
+#prev-arrow {
+  width: 50px;
+  transform: rotate(180deg) translateY(38%);
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  fill: white; }
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  font-size: 40px; }
+
+.footer-icon {
+  font-size: 150%;
+  color: #1e1f24; }
+  @media brk-narrow {
+    .footer-icon {
+      font-size: 125%; } }
+  @media (max-width: 768px) {
+    .footer-icon {
+      font-size: 200%; } }
+
+#map {
+  height: 400px;
+  width: 100%; }
+  @media (max-width: 576px) {
+    #map {
+      height: 300px; } }
+
+/*# sourceMappingURL=application.css.map */

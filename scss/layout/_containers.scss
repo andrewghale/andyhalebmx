@@ -1,0 +1,60 @@
+
+.fullheight {
+  height: 100vh;
+  position: relative;
+
+  @media #{$brk-narrow} {
+    height: 65vh;
+    background-image: url(/#{$path-img}/london1_opt.jpg);
+    background-position-y: 40%;
+    background-size: cover;
+  }
+}
+
+.chev-div {
+  @extend %centeredX;
+  bottom: 10%;
+}
+
+.mob-padding {
+  @media #{$brk-narrow} {
+    padding-top: 38%;
+  }
+}
+
+.slick-container {
+  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(51, 106, 113, 0.7)),
+    url('#{$path-img}/london2-main.JPG');
+  background-size: cover;
+  padding: 110px 50px;
+  position: relative;
+
+  @media #{$brk-narrow} {
+    background-image: none;
+    background-color: $white;
+    padding: 0 0;
+  }
+}
+
+.slick-mob {
+  @media #{$brk-narrow} {
+    padding: 0 0;
+  }
+}
+
+.shows-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.shows-image {
+  height: auto;
+  width: 100%;
+  -webkit-transition: 1.6s ease;
+  transition: 1.6s ease;
+}
+
+.shows-image-container:hover .shows-image {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
