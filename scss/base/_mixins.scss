@@ -1,0 +1,15 @@
+@mixin bg-eggshell() {
+  background-color: $white;
+}
+
+@mixin fullheight() {
+  height: 100vh;
+  position: relative;
+
+  @media #{$brk-narrow} {
+    height: 65vh;
+    background-image: url(/#{$path-img}/london1_opt.jpg);
+    background-position-y: 40%;
+    background-size: cover;
+  }
+}

@@ -10,7 +10,7 @@ var del = require("del");
 
 gulp.task("concatScripts", function() {
   return gulp
-    .src(["js/slick.js", "js/scripts.js"])
+    .src(["js/map.js", "js/jquery.js", "js/slick.js", "js/scripts.js"])
     .pipe(maps.init())
     .pipe(concat("app.js"))
     .pipe(maps.write("./"))

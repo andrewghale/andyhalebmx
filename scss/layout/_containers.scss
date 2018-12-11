@@ -1,14 +1,46 @@
 
-.fullheight {
-  height: 100vh;
-  position: relative;
 
-  @media #{$brk-narrow} {
-    height: 65vh;
-    background-image: url(/#{$path-img}/london1_opt.jpg);
-    background-position-y: 40%;
-    background-size: cover;
+#bio {
+  @include bg-eggshell();
+  @include media-breakpoint-down (sm) {
+    padding-top: 38%;
   }
+}
+
+#header-container {
+  @include fullheight();
+}
+
+#shows {
+  @include bg-eggshell();
+}
+
+.bio-info {
+  @extend .col-sm-12;
+  @extend .col-md-10;
+  @extend .offset-md-1;
+  @extend .col-lg-8;
+  @extend .offset-lg-2;
+  @extend .py-4;
+
+}
+
+.shows-column {
+  @extend .col-xl;
+  @extend .col-lg-6;
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .p-0;
+}
+
+
+
+#contact {
+  @include bg-eggshell();
+}
+
+#footer {
+  @include bg-eggshell();
 }
 
 .chev-div {
@@ -16,11 +48,6 @@
   bottom: 10%;
 }
 
-.mob-padding {
-  @media #{$brk-narrow} {
-    padding-top: 38%;
-  }
-}
 
 .slick-container {
   background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(51, 106, 113, 0.7)),
@@ -36,11 +63,11 @@
   }
 }
 
-.slick-mob {
-  @media #{$brk-narrow} {
-    padding: 0 0;
-  }
-}
+// .slick-mob {
+//   @media #{$brk-narrow} {
+//     padding: 0 0;
+//   }
+// }
 
 .shows-image-container {
   position: relative;

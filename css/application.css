@@ -332,7 +332,7 @@ template {
     padding-left: 0; }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .shows-column, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .bio-info, .logo, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
@@ -503,7 +503,7 @@ template {
   .col-sm-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-sm-6 {
+  .col-sm-6, .shows-column {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-sm-7 {
@@ -521,7 +521,7 @@ template {
   .col-sm-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-  .col-sm-12 {
+  .col-sm-12, .bio-info, .logo {
     flex: 0 0 100%;
     max-width: 100%; }
   .order-sm-first {
@@ -603,7 +603,7 @@ template {
   .col-md-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-md-6 {
+  .col-md-6, .shows-column {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-md-7 {
@@ -615,7 +615,7 @@ template {
   .col-md-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-  .col-md-10 {
+  .col-md-10, .bio-info, .logo {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
   .col-md-11 {
@@ -656,7 +656,7 @@ template {
     order: 12; }
   .offset-md-0 {
     margin-left: 0; }
-  .offset-md-1 {
+  .offset-md-1, .bio-info {
     margin-left: 8.33333%; }
   .offset-md-2 {
     margin-left: 16.66667%; }
@@ -703,13 +703,13 @@ template {
   .col-lg-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-lg-6 {
+  .col-lg-6, .shows-column {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-lg-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-  .col-lg-8 {
+  .col-lg-8, .bio-info, .logo {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
   .col-lg-9 {
@@ -758,7 +758,7 @@ template {
     margin-left: 0; }
   .offset-lg-1 {
     margin-left: 8.33333%; }
-  .offset-lg-2 {
+  .offset-lg-2, .bio-info {
     margin-left: 16.66667%; }
   .offset-lg-3 {
     margin-left: 25%; }
@@ -780,7 +780,7 @@ template {
     margin-left: 91.66667%; } }
 
 @media (min-width: 1200px) {
-  .col-xl {
+  .col-xl, .shows-column {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%; }
@@ -803,7 +803,7 @@ template {
   .col-xl-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-xl-6 {
+  .col-xl-6, .logo {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-xl-7 {
@@ -3100,7 +3100,7 @@ button.bg-dark:focus {
 .mx-5 {
   margin-left: 3rem !important; }
 
-.p-0 {
+.p-0, .shows-column {
   padding: 0 !important; }
 
 .pt-0,
@@ -3180,7 +3180,8 @@ button.bg-dark:focus {
   padding: 1.5rem !important; }
 
 .pt-4,
-.py-4 {
+.py-4,
+.bio-info {
   padding-top: 1.5rem !important; }
 
 .pr-4,
@@ -3188,7 +3189,8 @@ button.bg-dark:focus {
   padding-right: 1.5rem !important; }
 
 .pb-4,
-.py-4 {
+.py-4,
+.bio-info {
   padding-bottom: 1.5rem !important; }
 
 .pl-4,
@@ -4150,25 +4152,38 @@ h3, h4, p, a {
 a:hover {
   color: #fafafa; }
 
-.bg-eggshell {
-  background-color: #fafafa; }
+.chev-div, .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
 
-.fullheight {
+#bio {
+  background-color: #fafafa; }
+  @media (max-width: 767.98px) {
+    #bio {
+      padding-top: 38%; } }
+
+#header-container {
   height: 100vh;
   position: relative; }
   @media (max-width: 576px) {
-    .fullheight {
+    #header-container {
       height: 65vh;
       background-image: url(/../images/london1_opt.jpg);
       background-position-y: 40%;
       background-size: cover; } }
 
+#shows {
+  background-color: #fafafa; }
+
+#contact {
+  background-color: #fafafa; }
+
+#footer {
+  background-color: #fafafa; }
+
 .chev-div {
   bottom: 10%; }
-
-@media (max-width: 576px) {
-  .mob-padding {
-    padding-top: 38%; } }
 
 .slick-container {
   background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(51, 106, 113, 0.7)), url("../images/london2-main.JPG");
@@ -4180,10 +4195,6 @@ a:hover {
       background-image: none;
       background-color: #fafafa;
       padding: 0 0; } }
-
-@media (max-width: 576px) {
-  .slick-mob {
-    padding: 0 0; } }
 
 .shows-image-container {
   position: relative;
@@ -4226,10 +4237,9 @@ a:hover {
     .logo {
       bottom: -35%; } }
 
-/* Background Video */
 #myVideo {
   position: fixed;
-  right: 0;
+  left: 210px;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
@@ -4238,11 +4248,6 @@ a:hover {
   @media (max-width: 576px) {
     #myVideo {
       display: none; } }
-
-.chev-div, .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); }
 
 /* Contact */
 .emailtext {

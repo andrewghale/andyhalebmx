@@ -24,6 +24,10 @@
 }
 
 .logo {
+  @extend .col-xl-6;
+  @extend .col-lg-8;
+  @extend .col-md-10;
+  @extend .col-sm-12;
   @extend %centeredX;
   bottom: 30%;
 
@@ -32,11 +36,9 @@
   }
 }
 
-/* Background Video */
-
 #myVideo {
   position: fixed;
-  right: 0;
+  left: 210px;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
