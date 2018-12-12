@@ -1,4 +1,6 @@
 
+// url for google maps API is: https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hBW136GdqB4oxn7VcdyHUQ_tSAHXibE&callback=initMap
+
 
 window.google = window.google || {};
 google.maps = google.maps || {};

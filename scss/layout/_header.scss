@@ -23,6 +23,11 @@
   }
 }
 
+#header-container {
+  @include fullheight();
+}
+
+
 .logo {
   @extend .col-xl-6;
   @extend .col-lg-8;

@@ -107,7 +107,7 @@
 
   <div id="shows">
     <div class="row">
-      <div class="col-xl col-lg-11 col-md-11 col-sm-11 p-4 m-4 my-auto mx-auto">
+      <div class="shows-info">
         <h1>Shows</h1>
         <p>My shows can add a great showpiece to your event. Kids love a BMX show whether it is at their school in term time or as part of a local festival.
           They can be tailored for your specific needs such as including workshops, or bringing along an extra rider for synchronised spinning tricks!</p>
@@ -132,9 +132,9 @@
   </div>
 
   <section id="contact">
-    <div class="bg-eggshell">
+    <!-- <div class="bg-eggshell"> -->
       <div class="row">
-        <div class="col-lg-5 col-md-6 mb-3 mb-md-0 offset-lg-1 px-4 py-4">
+        <div class="contact-container">
           <div class="card h-100">
             <div class="card-body text-center">
               <i class="fas fa-envelope mb-2"></i>
@@ -148,7 +148,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5 col-md-6 mb-3 mb-md-0 px-4 py-4">
+        <div class="contact-container">
           <div class="card h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt mb-2"></i>
@@ -163,103 +163,11 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </section>
+
   <!--The div element for the map -->
   <div id="map"></div>
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Bristol
-      var bristol = { lat: 51.4545045, lng: -2.5880147 };
-      // The map, centered at Bristol
-      var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 11,
-        center: bristol,
-        disableDefaultUI: true,
-        styles: [{"featureType":"all",
-                  "elementType":"geometry.fill",
-                  "stylers":[{"weight":"2.00"}]},
-
-                  {"featureType":"all",
-                  "elementType":"geometry.stroke",
-                  "stylers":[{"color":"#9c9c9c"}]},
-
-                  {"featureType":"all",
-                  "elementType":"labels.text",
-                  "stylers":[{"visibility":"on"}]},
-
-                  {"featureType": "administrative.province",
-                    "elementType": "labels.text",
-                    "stylers": [{"visibility": "off"}]},
-
-                  {"featureType":"landscape",
-                  "elementType":"all",
-                  "stylers":[{"color":"#f2f2f2"}]},
-
-                  {"featureType":"landscape",
-                  "elementType":"geometry.fill",
-                  "stylers":[{"color":"#ecf6ea"}]},
-
-                  {"featureType":"landscape.man_made",
-                  "elementType":"geometry.fill",
-                  "stylers":[{"color":"#eeeeee"}]},
-
-                  {"featureType":"poi",
-                  "elementType":"all",
-                  "stylers":[{"visibility":"off"}]},
-
-                  {"featureType":"road",
-                  "elementType":"all",
-                  "stylers":[{"saturation":-100},
-                  {"lightness":15}]},
-
-                  {"featureType":"road",
-                  "elementType":"geometry.fill",
-                  "stylers":[{"color":"#c4c4c4"}]},
-
-                  {"featureType":"road",
-                  "elementType":"labels.text.fill",
-                  "stylers":[{"color":"#7b7b7b"}]},
-
-                  {"featureType":"road",
-                  "elementType":"labels.text.stroke",
-                  "stylers":[{"color":"#ffffff"}]},
-
-                  {"featureType":"road.highway",
-                  "elementType":"all",
-                  "stylers":[{"visibility":"simplified"}]},
-
-                  {"featureType":"road.arterial",
-                  "elementType":"labels.icon",
-                  "stylers":[{"visibility":"off"}]},
-
-                  {"featureType":"transit",
-                  "elementType":"all",
-                  "stylers":[{"visibility":"off"}]},
-
-                  {"featureType":"water",
-                  "elementType":"all",
-                  "stylers":[{"color":"#46bcec"},
-                  {"visibility":"on"}]},
-
-                  {"featureType":"water",
-                  "elementType":"geometry.fill",
-                  "stylers":[{"color":"#99c5ff"}]},
-
-                  {"featureType":"water",
-                  "elementType":"labels.text.fill",
-                  "stylers":[{"color":"#070707"}]},
-
-                  {"featureType":"water",
-                  "elementType":"labels.text.stroke",
-                  "stylers":[{"color":"#ffffff"}]}]
-
-      });
-      // The marker
-      var marker = new google.maps.Marker({ position: bristol, map: map });
-    }
-  </script>
 
   <!-- Footer -->
   <footer id="footer">
@@ -285,10 +193,6 @@
     <div class="footer-copyright text-center py-3">© 2018 Andrew Hale
     </div>
   </footer>
-
-  <!-- Google Maps API -->
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hBW136GdqB4oxn7VcdyHUQ_tSAHXibE&callback=initMap">
-  </script> -->
 
   <!-- Custom Scripts -->
   <script src="js/app.js"></script>

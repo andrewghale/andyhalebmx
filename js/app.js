@@ -1,4 +1,6 @@
 
+// url for google maps API is: https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hBW136GdqB4oxn7VcdyHUQ_tSAHXibE&callback=initMap
+
 
 window.google = window.google || {};
 google.maps = google.maps || {};
@@ -13579,6 +13581,135 @@ return jQuery;
     };
 
 }));
+
+// Initialize and add the map
+function initMap() {
+  // The location of Bristol
+  var bristol = { lat: 51.4545045, lng: -2.5880147 };
+  // The map, centered at Bristol
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 11,
+    center: bristol,
+    disableDefaultUI: true,
+    styles: [
+      {
+        featureType: "all",
+        elementType: "geometry.fill",
+        stylers: [{ weight: "2.00" }]
+      },
+
+      {
+        featureType: "all",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#9c9c9c" }]
+      },
+
+      {
+        featureType: "all",
+        elementType: "labels.text",
+        stylers: [{ visibility: "on" }]
+      },
+
+      {
+        featureType: "administrative.province",
+        elementType: "labels.text",
+        stylers: [{ visibility: "off" }]
+      },
+
+      {
+        featureType: "landscape",
+        elementType: "all",
+        stylers: [{ color: "#f2f2f2" }]
+      },
+
+      {
+        featureType: "landscape",
+        elementType: "geometry.fill",
+        stylers: [{ color: "#ecf6ea" }]
+      },
+
+      {
+        featureType: "landscape.man_made",
+        elementType: "geometry.fill",
+        stylers: [{ color: "#eeeeee" }]
+      },
+
+      {
+        featureType: "poi",
+        elementType: "all",
+        stylers: [{ visibility: "off" }]
+      },
+
+      {
+        featureType: "road",
+        elementType: "all",
+        stylers: [{ saturation: -100 }, { lightness: 15 }]
+      },
+
+      {
+        featureType: "road",
+        elementType: "geometry.fill",
+        stylers: [{ color: "#c4c4c4" }]
+      },
+
+      {
+        featureType: "road",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#7b7b7b" }]
+      },
+
+      {
+        featureType: "road",
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#ffffff" }]
+      },
+
+      {
+        featureType: "road.highway",
+        elementType: "all",
+        stylers: [{ visibility: "simplified" }]
+      },
+
+      {
+        featureType: "road.arterial",
+        elementType: "labels.icon",
+        stylers: [{ visibility: "off" }]
+      },
+
+      {
+        featureType: "transit",
+        elementType: "all",
+        stylers: [{ visibility: "off" }]
+      },
+
+      {
+        featureType: "water",
+        elementType: "all",
+        stylers: [{ color: "#46bcec" }, { visibility: "on" }]
+      },
+
+      {
+        featureType: "water",
+        elementType: "geometry.fill",
+        stylers: [{ color: "#99c5ff" }]
+      },
+
+      {
+        featureType: "water",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#070707" }]
+      },
+
+      {
+        featureType: "water",
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#ffffff" }]
+      }
+    ]
+  });
+  // The marker
+  var marker = new google.maps.Marker({ position: bristol, map: map });
+}
 
 // A $( document ).ready() block.
 $(document).ready(function() {

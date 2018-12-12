@@ -1,53 +1,22 @@
-
+.chev-div {
+  @extend %centeredX;
+  bottom: 10%;
+}
 
 #bio {
   @include bg-eggshell();
   @include media-breakpoint-down (sm) {
     padding-top: 38%;
   }
+  .bio-info {
+    @extend .col-sm-12;
+    @extend .col-md-10;
+    @extend .offset-md-1;
+    @extend .col-lg-8;
+    @extend .offset-lg-2;
+    @extend .py-4;
+  }
 }
-
-#header-container {
-  @include fullheight();
-}
-
-#shows {
-  @include bg-eggshell();
-}
-
-.bio-info {
-  @extend .col-sm-12;
-  @extend .col-md-10;
-  @extend .offset-md-1;
-  @extend .col-lg-8;
-  @extend .offset-lg-2;
-  @extend .py-4;
-
-}
-
-.shows-column {
-  @extend .col-xl;
-  @extend .col-lg-6;
-  @extend .col-md-6;
-  @extend .col-sm-6;
-  @extend .p-0;
-}
-
-
-
-#contact {
-  @include bg-eggshell();
-}
-
-#footer {
-  @include bg-eggshell();
-}
-
-.chev-div {
-  @extend %centeredX;
-  bottom: 10%;
-}
-
 
 .slick-container {
   background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(51, 106, 113, 0.7)),
@@ -63,25 +32,82 @@
   }
 }
 
-// .slick-mob {
-//   @media #{$brk-narrow} {
-//     padding: 0 0;
-//   }
-// }
+.slick-mob {
+  @media #{$brk-narrow} {
+    padding: 0 0;
+  }
+}
+
+#shows {
+  @include bg-eggshell();
+}
+
+.shows-info {
+  @extend .col-xl;
+  @extend .col-lg-11;
+  @extend .col-md-11;
+  @extend .col-sm-11;
+  @extend .p-4;
+  @extend .m-4;
+  @extend .my-auto;
+  @extend .mx-auto;
+}
+
+.shows-column {
+  @extend .col-xl;
+  @extend .col-lg-6;
+  @extend .col-md-6;
+  @extend .col-sm-6;
+  @extend .p-0;
+}
+
+#contact {
+  @include bg-eggshell();
+}
+
+.contact-container {
+  @extend .col-lg-6;
+  @extend .col-md-6;
+  @extend .mb-3;
+  @extend .mb-md-0;
+  @extend .px-4;
+  @extend .py-4;
+}
 
 .shows-image-container {
   position: relative;
   overflow: hidden;
+
+  .shows-image {
+    height: auto;
+    width: 100%;
+    -webkit-transition: 1.6s ease;
+    transition: 1.6s ease;
+
+    -webkit-filter: grayscale(30%), opacity(0.8); /* Safari 6.0 - 9.0 */
+    filter: grayscale(30%) opacity(0.9);
+    &:hover {
+      -webkit-filter: grayscale(30%), opacity(0.8); /* Safari 6.0 - 9.0 */
+      filter: grayscale(20%) opacity(0.8);
+      transition: 0.2s;
+      }
+      .filter:hover {
+      -webkit-filter: grayscale(30%), opacity(0.8); /* Safari 6.0 - 9.0 */
+      filter: grayscale(20%) opacity(0.8);
+      transition: 0.2s;
+    }
+  }
 }
 
-.shows-image {
-  height: auto;
-  width: 100%;
-  -webkit-transition: 1.6s ease;
-  transition: 1.6s ease;
-}
+
 
 .shows-image-container:hover .shows-image {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+
+
+  #footer {
+    @include bg-eggshell();
+    padding-top: 1rem;
+  }
 }
