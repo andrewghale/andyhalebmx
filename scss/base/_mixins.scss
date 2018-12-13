@@ -6,7 +6,7 @@
   height: 100vh;
   position: relative;
 
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     height: 65vh;
     background-image: url(/#{$path-img}/london1_opt.jpg);
     background-position-y: 40%;

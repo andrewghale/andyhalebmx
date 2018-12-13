@@ -5,7 +5,7 @@
 
 #bio {
   @include bg-eggshell();
-  @include media-breakpoint-down (sm) {
+  @include media-breakpoint-down(xs) {
     padding-top: 38%;
   }
   .bio-info {
@@ -25,7 +25,7 @@
   padding: 110px 50px;
   position: relative;
 
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     background-image: none;
     background-color: $white;
     padding: 0 0;
@@ -33,7 +33,7 @@
 }
 
 .slick-mob {
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     padding: 0 0;
   }
 }
@@ -99,15 +99,19 @@
   }
 }
 
-
-
 .shows-image-container:hover .shows-image {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 
+}
 
-  #footer {
-    @include bg-eggshell();
-    padding-top: 1rem;
-  }
+#footer {
+  @include bg-eggshell();
+  padding-top: 1rem;
+}
+
+.footer-copyright {
+  background-color: $white;
+  padding: 1rem 0;
+  text-align: center;
 }

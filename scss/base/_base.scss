@@ -27,7 +27,7 @@ h3, h4, p, a{
 }
 
 p {
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     font-size: 17px;
   }
 }

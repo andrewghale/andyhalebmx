@@ -28,10 +28,10 @@
   font-size: 150%;
   color: $black;
 
-  @media #{brk-narrow} {
+  @include media-breakpoint-down(xs) {
       font-size: 125%;
   }
-  @media #{$brk-med} {
+  @include media-breakpoint-down(sm) {
       font-size: 200%;
   }
 }

@@ -1,23 +1,31 @@
 /* Masthead */
 
+.nav {
+  @extend .navbar;
+  @extend .navbar-expand-lg;
+  @extend .custom-toggler;
+}
+
+.nav-ul {
+  @extend .justify-content-center;
+  @extend .mx-auto;
+  @extend .navbar-nav;
+  @extend .mr-auto;
+  @extend .mt-2;
+  @extend .mt-lg-0;
+}
+
 .nav-link {
   color: $white;
   margin: 0 1rem;
   font-size: 1.25rem;
-
-  @media #{$brk-narrow} {
-    font-size: 100%;
-    color: $black;
-  }
-}
-
-.grow {
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
 
-    // correct?
-    @media #{$brk-narrow} {
+    @include media-breakpoint-down(xs) {
+      font-size: 100%;
+      color: $black;
       transform: scale(1);
     }
   }
@@ -27,7 +35,6 @@
   @include fullheight();
 }
 
-
 .logo {
   @extend .col-xl-6;
   @extend .col-lg-8;
@@ -36,7 +43,7 @@
   @extend %centeredX;
   bottom: 30%;
 
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     bottom: -35%;
   }
 }
@@ -50,7 +57,7 @@
   z-index: -100;
   transform: scale(1.25);
 
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     display: none;
   }
 }

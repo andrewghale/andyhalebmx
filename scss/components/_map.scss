@@ -1,8 +1,9 @@
 #map {
+  background-color: $white;
   height: 400px;
   width: 100%;
 
-  @media #{$brk-narrow} {
+  @include media-breakpoint-down(xs) {
     height: 300px;
   }
 }

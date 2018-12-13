@@ -7,10 +7,12 @@ var rename = require("gulp-rename");
 var sass = require("gulp-sass");
 var maps = require("gulp-sourcemaps");
 var del = require("del");
+var plumber = require("gulp-plumber");
 
 gulp.task("concatScripts", function() {
   return gulp
     .src(["js/map.js", "js/jquery.js", "js/slick.js", "js/scripts.js"])
+    .pipe(plumber())
     .pipe(maps.init())
     .pipe(concat("app.js"))
     .pipe(maps.write("./"))
@@ -28,6 +30,7 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 gulp.task("compileSass", function() {
   return gulp
     .src("scss/application.scss")
+    .pipe(plumber())
     .pipe(maps.init())
     .pipe(sass())
     .pipe(maps.write("./"))
@@ -61,9 +64,9 @@ gulp.task("build", ["minifyScripts", "compileSass"], function() {
 gulp.task("serve", ["watchFiles"]);
 
 // default task
-gulp.task("default", ["sass"], function() {
-  gulp.watch(scss.watch, ["sass"]);
-});
+// gulp.task("default", ["sass"], function() {
+//   gulp.watch(scss.watch, ["sass"]);
+// });
 
 gulp.task("default", ["clean"], function() {
   gulp.start("build");
